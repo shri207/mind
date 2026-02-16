@@ -44,6 +44,7 @@ export default function Navbar() {
                         <a href="#how-it-works" className="text-sm text-slate-400 hover:text-white transition-colors">How It Works</a>
                         <a href="#features" className="text-sm text-slate-400 hover:text-white transition-colors">Features</a>
                         <a href="#trust" className="text-sm text-slate-400 hover:text-white transition-colors">Trust & Safety</a>
+                        <Link to="/pitch" className="text-sm text-teal-400 hover:text-teal-300 transition-colors font-medium">Pitch Deck</Link>
                     </div>
                 )}
 
@@ -82,6 +83,7 @@ export default function Navbar() {
                                     <a href="#how-it-works" onClick={() => setMobileOpen(false)} className="text-sm text-slate-400 hover:text-white transition-colors">How It Works</a>
                                     <a href="#features" onClick={() => setMobileOpen(false)} className="text-sm text-slate-400 hover:text-white transition-colors">Features</a>
                                     <a href="#trust" onClick={() => setMobileOpen(false)} className="text-sm text-slate-400 hover:text-white transition-colors">Trust & Safety</a>
+                                    <Link to="/pitch" onClick={() => setMobileOpen(false)} className="text-sm text-teal-400 hover:text-teal-300 transition-colors font-medium">Pitch Deck</Link>
                                 </>
                             )}
                             <Link
