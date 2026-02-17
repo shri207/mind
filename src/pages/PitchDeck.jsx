@@ -15,7 +15,7 @@ const PitchDeck = () => {
             subtitle: "Presentation",
             icon: <Users className="w-24 h-24 text-teal-400" />,
             content: (
-                <div className="flex flex-col items-center gap-4">
+                <div className="flex flex-col items-center gap-4 px-4">
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
                         Presenting Inner Self
                     </h2>
@@ -60,7 +60,7 @@ const PitchDeck = () => {
             title: "The Solution",
             icon: <Sparkles className="w-16 h-16 text-purple-400" />,
             content: (
-                <div className="text-center space-y-6 max-w-2xl">
+                <div className="text-center space-y-6 max-w-2xl px-4">
                     <h2 className="text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                         Inner Self
                     </h2>
@@ -191,7 +191,7 @@ const PitchDeck = () => {
                                 {slides[currentSlide].icon}
                             </div>
 
-                            <h1 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight uppercase">
+                            <h1 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight uppercase px-2">
                                 {slides[currentSlide].title}
                             </h1>
 
@@ -208,16 +208,16 @@ const PitchDeck = () => {
 
                 {/* Navigation Controls */}
                 <div className="flex justify-between items-center mt-4 pt-4 border-t border-white/5 w-full">
-                    <button onClick={prevSlide} className="p-3 hover:bg-white/10 rounded-full transition-colors group">
-                        <ChevronLeft className="text-gray-400 group-hover:text-white" size={24} />
+                    <button onClick={prevSlide} className="p-4 hover:bg-white/10 rounded-full transition-colors group z-20">
+                        <ChevronLeft className="text-gray-400 group-hover:text-white" size={32} />
                     </button>
 
                     <div className="text-xs font-mono text-gray-500 tracking-widest">
                         SLIDE {currentSlide + 1} / {slides.length}
                     </div>
 
-                    <button onClick={nextSlide} className="p-3 hover:bg-white/10 rounded-full transition-colors group">
-                        <ChevronRight className="text-gray-400 group-hover:text-white" size={24} />
+                    <button onClick={nextSlide} className="p-4 hover:bg-white/10 rounded-full transition-colors group z-20">
+                        <ChevronRight className="text-gray-400 group-hover:text-white" size={32} />
                     </button>
                 </div>
 

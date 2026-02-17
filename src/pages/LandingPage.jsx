@@ -104,7 +104,7 @@ export default function LandingPage() {
                         </motion.div>
 
                         {/* Headline */}
-                        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-6">
+                        <h1 className="text-4xl md:text-7xl font-extrabold leading-tight tracking-tight mb-6">
                             <span className="text-white">Mental Clarity for</span>
                             <br />
                             <span className="gradient-text">Professionals.</span>
@@ -214,7 +214,7 @@ export default function LandingPage() {
             <section className="py-24 px-6">
                 <div className="max-w-4xl mx-auto">
                     <AnimatedSection>
-                        <div className="relative rounded-3xl overflow-hidden p-12 md:p-16 text-center">
+                        <div className="relative rounded-3xl overflow-hidden p-8 md:p-16 text-center">
                             <div className="absolute inset-0 bg-gradient-to-br from-brand-600/30 via-lavender-600/20 to-teal-600/30 animate-gradient" />
                             <div className="absolute inset-0 glass" />
                             <div className="relative z-10">

@@ -379,7 +379,7 @@ export default function Dashboard() {
                             animate={{ x: 0 }}
                             exit={{ x: '100%' }}
                             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                            className="absolute right-0 top-0 bottom-0 w-[85%] max-w-[340px] bg-surface-primary border-l border-white/5 overflow-y-auto p-4 space-y-4"
+                            className="absolute right-0 top-0 bottom-0 w-[85%] max-w-[340px] bg-surface-primary border-l border-white/5 overflow-y-auto p-4 space-y-4 pb-20"
                             onClick={e => e.stopPropagation()}
                         >
                             <div className="flex items-center justify-between mb-2">
