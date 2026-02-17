@@ -11,13 +11,13 @@ const PitchDeck = () => {
         {
             id: 0,
             type: "team",
-            title: "Team [Name]",
+            title: "Thrivers",
             subtitle: "Presentation",
             icon: <Users className="w-24 h-24 text-teal-400" />,
             content: (
                 <div className="flex flex-col items-center gap-4">
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
-                        Presenting MindFuel AI
+                        Presenting Inner Self
                     </h2>
                     <p className="text-xl text-gray-300">Innovating Mental Wellness with AI</p>
                 </div>
@@ -62,7 +62,7 @@ const PitchDeck = () => {
             content: (
                 <div className="text-center space-y-6 max-w-2xl">
                     <h2 className="text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                        MindFuel AI
+                        Inner Self
                     </h2>
                     <p className="text-xl text-gray-200 leading-relaxed">
                         An intelligent, always-available AI companion that provides <span className="text-purple-300 font-bold">active cognitive support</span>, mood tracking, and crisis intervention—bridging the gap between self-help and professional therapy.
@@ -105,7 +105,7 @@ const PitchDeck = () => {
             icon: <Heart className="w-20 h-20 text-pink-500 animate-pulse" />,
             content: (
                 <div className="text-center space-y-8">
-                    <p className="text-2xl text-gray-300">See MindFuel AI in action.</p>
+                    <p className="text-2xl text-gray-300">See Inner Self in action.</p>
                     <button
                         onClick={() => navigate('/')}
                         className="px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-full text-xl shadow-lg shadow-pink-500/30 border border-pink-400/50 hover:scale-105 transition-transform"

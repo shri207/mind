@@ -245,8 +245,8 @@ export default function LandingPage() {
                             <Brain className="w-5 h-5 text-white" />
                         </div>
                         <span className="text-xl font-bold">
-                            <span className="gradient-text">Mind</span>
-                            <span className="text-slate-200">Fuel</span>
+                            <span className="gradient-text">Inner</span>
+                            <span className="text-slate-200">Self</span>
                         </span>
                     </div>
 
@@ -257,11 +257,11 @@ export default function LandingPage() {
                     </div>
 
                     <p className="text-xs text-slate-600 leading-relaxed max-w-2xl mx-auto">
-                        MindFuel is a support tool, not a medical provider.
+                        Inner Self is a support tool, not a medical provider.
                         If in crisis: <a href="tel:988" className="text-slate-400 hover:text-white">988</a> (US) or <a href="tel:911" className="text-slate-400 hover:text-white">911</a>.
                     </p>
                     <p className="text-xs text-slate-700 mt-4">
-                        © {new Date().getFullYear()} MindFuel. All rights reserved.
+                        © {new Date().getFullYear()} Inner Self. All rights reserved.
                     </p>
                 </div>
             </footer>

@@ -99,7 +99,7 @@ export default function Dashboard() {
                     </div>
 
                     <h1 className="text-2xl font-bold text-white mb-2">
-                        Welcome to <span className="gradient-text">MindFuel</span>
+                        Welcome to <span className="gradient-text">Inner Self</span>
                     </h1>
                     <p className="text-slate-400 text-sm mb-8">
                         Your AI-powered mental wellness companion.
@@ -163,8 +163,8 @@ export default function Dashboard() {
                             <Brain className="w-4.5 h-4.5 text-white" />
                         </div>
                         <span className="hidden lg:inline text-lg font-bold">
-                            <span className="gradient-text">Mind</span>
-                            <span className="text-slate-200">Fuel</span>
+                            <span className="gradient-text">Inner</span>
+                            <span className="text-slate-200">Self</span>
                         </span>
                     </Link>
                 </div>
@@ -264,7 +264,7 @@ export default function Dashboard() {
                             <Brain className="w-4 h-4 text-white" />
                         </div>
                         <span className="text-lg font-bold">
-                            <span className="gradient-text">Mind</span><span className="text-slate-200">Fuel</span>
+                            <span className="gradient-text">Inner</span><span className="text-slate-200">Self</span>
                         </span>
                     </Link>
                     <div className="flex items-center gap-2">
@@ -300,7 +300,7 @@ export default function Dashboard() {
                         <div>
                             <h1 className="text-lg font-semibold text-white flex items-center gap-2">
                                 <MessageSquare className="w-4 h-4 text-brand-400" />
-                                MindFuel AI
+                                Inner Self AI
                             </h1>
                             <p className="text-xs text-slate-600">
                                 {new Date().getHours() < 12 ? 'Good Morning' : new Date().getHours() < 17 ? 'Good Afternoon' : 'Good Evening'}{user?.displayName ? `, ${user.displayName.split(' ')[0]}` : ''} — your AI wellness companion is ready
@@ -326,7 +326,7 @@ export default function Dashboard() {
 
                 <div className="px-4 py-1.5 border-t border-white/5 shrink-0">
                     <p className="text-[10px] text-slate-700 text-center">
-                        MindFuel is not a licensed medical provider.
+                        Inner Self is not a licensed medical provider.
                         If in crisis, contact emergency services or <Link to="/privacy" className="text-brand-500/60 hover:text-brand-400">learn more</Link>.
                     </p>
                 </div>

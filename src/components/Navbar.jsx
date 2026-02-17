@@ -32,15 +32,15 @@ export default function Navbar() {
                         </div>
                     </div>
                     <span className="text-xl font-bold tracking-tight">
-                        <span className="gradient-text">Mind</span>
-                        <span className="text-slate-200">Fuel</span>
+                        <span className="gradient-text">Inner</span>
+                        <span className="text-slate-200">Self</span>
                     </span>
                 </Link>
 
                 {/* Desktop Nav */}
                 {isLanding && (
                     <div className="hidden md:flex items-center gap-8">
-                        <a href="#problem" className="text-sm text-slate-400 hover:text-white transition-colors">Why MindFuel</a>
+                        <a href="#problem" className="text-sm text-slate-400 hover:text-white transition-colors">Why Inner Self</a>
                         <a href="#how-it-works" className="text-sm text-slate-400 hover:text-white transition-colors">How It Works</a>
                         <a href="#features" className="text-sm text-slate-400 hover:text-white transition-colors">Features</a>
                         <a href="#trust" className="text-sm text-slate-400 hover:text-white transition-colors">Trust & Safety</a>
@@ -79,7 +79,7 @@ export default function Navbar() {
                         <div className="px-6 py-4 flex flex-col gap-4">
                             {isLanding && (
                                 <>
-                                    <a href="#problem" onClick={() => setMobileOpen(false)} className="text-sm text-slate-400 hover:text-white transition-colors">Why MindFuel</a>
+                                    <a href="#problem" onClick={() => setMobileOpen(false)} className="text-sm text-slate-400 hover:text-white transition-colors">Why Inner Self</a>
                                     <a href="#how-it-works" onClick={() => setMobileOpen(false)} className="text-sm text-slate-400 hover:text-white transition-colors">How It Works</a>
                                     <a href="#features" onClick={() => setMobileOpen(false)} className="text-sm text-slate-400 hover:text-white transition-colors">Features</a>
                                     <a href="#trust" onClick={() => setMobileOpen(false)} className="text-sm text-slate-400 hover:text-white transition-colors">Trust & Safety</a>

@@ -7,12 +7,12 @@ const SECTIONS = [
     {
         icon: Lock,
         title: 'Encryption',
-        content: 'All conversations and personal data within MindFuel are encrypted using industry-standard AES-256 encryption at rest and TLS 1.3 in transit. Your reflections and emotional data are protected with the same level of security used by financial institutions.',
+        content: 'All conversations and personal data within Inner Self are encrypted using industry-standard AES-256 encryption at rest and TLS 1.3 in transit. Your reflections and emotional data are protected with the same level of security used by financial institutions.',
     },
     {
         icon: Eye,
         title: 'Anonymous Mode',
-        content: 'MindFuel can be used without creating an account. In anonymous mode, no personal information is collected or stored. Your conversations exist only in your browser session and are deleted when you close the app.',
+        content: 'Inner Self can be used without creating an account. In anonymous mode, no personal information is collected or stored. Your conversations exist only in your browser session and are deleted when you close the app.',
     },
     {
         icon: Database,
@@ -32,7 +32,7 @@ const SECTIONS = [
     {
         icon: Shield,
         title: 'Third-Party Services',
-        content: 'MindFuel uses Google Gemini for AI conversation processing and ElevenLabs for voice synthesis. Conversations sent to these services are processed in real-time and are subject to their respective privacy policies. We recommend reviewing their policies for complete transparency.',
+        content: 'Inner Self uses Google Gemini for AI conversation processing and ElevenLabs for voice synthesis. Conversations sent to these services are processed in real-time and are subject to their respective privacy policies. We recommend reviewing their policies for complete transparency.',
     },
 ]
 
@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
                     <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">Privacy Policy</h1>
                     <p className="text-slate-400 mb-2">Last updated: February 2026</p>
                     <p className="text-slate-400 text-sm leading-relaxed mb-12 max-w-xl">
-                        At MindFuel, your privacy isn't just a policy — it's a core design principle.
+                        At Inner Self, your privacy isn't just a policy — it's a core design principle.
                         We believe mental wellness tools should be the most private software you use.
                     </p>
 
@@ -82,7 +82,7 @@ export default function PrivacyPolicy() {
                     {/* Legal Footer */}
                     <div className="mt-12 pt-8 border-t border-white/5">
                         <p className="text-xs text-slate-600 leading-relaxed">
-                            MindFuel is a mental wellness support platform and not a licensed medical provider.
+                            Inner Self is a mental wellness support platform and not a licensed medical provider.
                             If you are experiencing a crisis, please contact local emergency services or a licensed
                             mental health professional. For questions about this policy, you may reach our team
                             at privacy@mindfuel.app.

@@ -93,7 +93,7 @@ export default function CrisisModal({ isOpen, onClose }) {
                             </div>
 
                             <p className="text-xs text-slate-500 italic pt-2">
-                                MindFuel is not a crisis service. If you are in immediate danger, please call emergency services.
+                                Inner Self is not a crisis service. If you are in immediate danger, please call emergency services.
                             </p>
                         </div>
 

@@ -35,7 +35,7 @@ export default function AiChat({ onCrisis, onSentimentUpdate, isAuthReady, fulls
 
         const welcomeMsg = {
             role: 'ai',
-            content: "Welcome to MindFuel. I'm here as your mental wellness companion — think of me as a calm, supportive coach. How are you feeling today? Take a moment to check in with yourself.",
+            content: "Welcome to Inner Self. I'm here as your mental wellness companion — think of me as a calm, supportive coach. How are you feeling today? Take a moment to check in with yourself.",
             timestamp: new Date(),
         }
 
