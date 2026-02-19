@@ -35,7 +35,7 @@ export default function AiChat({ onCrisis, onSentimentUpdate, isAuthReady, fulls
 
         const welcomeMsg = {
             role: 'ai',
-            content: "Welcome to Inner Self. I'm here as your mental wellness companion — think of me as a calm, supportive coach. How are you feeling today? Take a moment to check in with yourself.",
+            content: "Hello, I'm Dr. Inner Self — your personal psychiatrist and therapist. This is a safe, judgment-free space where you can share anything that's on your mind. I'm here to listen deeply, help you explore your feelings, and guide you toward clarity and healing. How are you feeling today? Take a moment to check in with yourself.",
             timestamp: new Date(),
         }
 
@@ -77,31 +77,32 @@ export default function AiChat({ onCrisis, onSentimentUpdate, isAuthReady, fulls
         setInput('')
         setLoading(true)
 
+
         setSyncStatus('saving')
-        try {
-            await saveChatMessage('user', trimmed)
-            setSyncStatus('synced')
-        } catch (e) {
-            console.warn('Failed to save user message:', e)
-            setSyncStatus('error')
-        }
+        // Non-blocking save for user message
+        saveChatMessage('user', trimmed)
+            .then(() => setSyncStatus('synced'))
+            .catch((e) => {
+                console.warn('Failed to save user message:', e)
+                setSyncStatus('error')
+            })
 
         try {
             const aiResponse = await sendMessage(trimmed)
             const aiMsg = { role: 'ai', content: aiResponse, timestamp: new Date() }
             setMessages(prev => [...prev, aiMsg])
 
-            try {
-                await saveChatMessage('ai', aiResponse)
-            } catch (e) {
-                console.warn('Failed to save AI message:', e)
-            }
+            // Non-blocking save for AI message
+            saveChatMessage('ai', aiResponse)
+                .catch(e => console.warn('Failed to save AI message:', e))
 
-            try {
-                const sentiment = await analyzeSentiment(trimmed)
-                onSentimentUpdate?.(sentiment)
-                await saveMoodSnapshot(sentiment)
-            } catch (e) { /* don't block on sentiment failure */ }
+            // Non-blocking sentiment analysis
+            analyzeSentiment(trimmed)
+                .then(async (sentiment) => {
+                    onSentimentUpdate?.(sentiment)
+                    await saveMoodSnapshot(sentiment)
+                })
+                .catch(e => { /* don't block on sentiment failure */ })
 
             if (voiceEnabled) {
                 setIsSpeaking(true)

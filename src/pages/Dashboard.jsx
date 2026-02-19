@@ -8,8 +8,12 @@ import BurnoutMeter from '../components/BurnoutMeter.jsx'
 import QuickResetTools from '../components/QuickResetTools.jsx'
 import BreathingExercise from '../components/BreathingExercise.jsx'
 import CrisisModal from '../components/CrisisModal.jsx'
+import LanguageSelector from '../components/LanguageSelector.jsx'
 import { signInWithGoogle, logOut, onAuthChange } from '../services/firebase.js'
 import { loadMoodHistory } from '../services/firestore.js'
+import { setLanguage } from '../services/gemini.js'
+import { setTTSLanguage } from '../services/elevenlabs.js'
+import { setSpeechLanguage } from '../services/speechRecognition.js'
 
 export default function Dashboard() {
     const [moodData, setMoodData] = useState({
@@ -26,6 +30,15 @@ export default function Dashboard() {
     const [user, setUser] = useState(null)
     const [isAuthReady, setIsAuthReady] = useState(false)
     const [signingIn, setSigningIn] = useState(false)
+    const [selectedLanguage, setSelectedLanguage] = useState(null)
+
+    const handleLanguageSelect = (lang) => {
+        setSelectedLanguage(lang)
+        setLanguage(lang)
+        setTTSLanguage(lang)
+        setSpeechLanguage(lang)
+        console.log(`[Dashboard] All services configured for language: ${lang}`)
+    }
 
     // Listen for auth state changes
     useEffect(() => {
@@ -83,6 +96,11 @@ export default function Dashboard() {
         if (score >= 70) return 'text-emerald-400'
         if (score >= 45) return 'text-amber-400'
         return 'text-red-400'
+    }
+
+    // ── Language Selection Screen (shown FIRST) ──
+    if (!selectedLanguage) {
+        return <LanguageSelector onSelect={handleLanguageSelect} />
     }
 
     // ── Sign-In Screen ──
